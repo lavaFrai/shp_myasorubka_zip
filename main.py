@@ -32,19 +32,25 @@ class App:
 
     @staticmethod
     def decompress_file_path() -> None:
-        filename: str = fd.askopenfilename()
-        if filename is not None:
-            print(filename)
-            decompressor.unzip(filename, filename[:filename.rindex("/")] + "/uncompress")
-            showinfo("Success", "Oke!\nDecompressing successfully finished")
+        try:
+            filename: str = fd.askopenfilename()
+            if filename is not None:
+                print(filename)
+                decompressor.unzip(filename, filename[:filename.rindex("/")] + "/uncompress")
+                showinfo("Success", "Oke!\nDecompressing successfully finished")
+        except BaseException as e:
+            showinfo("Error", "Fail\n" + str(e))
 
     @staticmethod
     def compress_file_path() -> None:
-        filename: str = fd.askopenfilename()
-        if filename is not None:
-            print(filename)
-            compressor.zip(filename, filename + ".zip")
-            showinfo("Success", "Oke!\nCompressing successfully finished")
+        try:
+            filename: str = fd.askopenfilename()
+            if filename is not None:
+                print(filename)
+                compressor.zip(filename, filename + ".zip")
+                showinfo("Success", "Oke!\nCompressing successfully finished")
+        except BaseException as e:
+            showinfo("Error", "Fail\n" + str(e))
 
     def run(self):
         self.init_root()
