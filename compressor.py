@@ -1,3 +1,6 @@
+# (c) lava_frai 2022-
+# Open GPL
+
 from zipfile import ZipFile
 
 
