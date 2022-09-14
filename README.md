@@ -5,6 +5,6 @@
 ### Linux:
 ```bash
   git clone https://github.com/lavaFrai/shp_myasorubka_zip/
-  pip install -i requirements.txt
+  pip install -r requirements.txt
   python3 main.py
 ```
