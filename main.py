@@ -1,3 +1,6 @@
+# (c) lava_frai 2022-
+# Open GPL
+
 import tkinter as ttk
 from tkinter.messagebox import showinfo
 from tkinter import filedialog as fd
